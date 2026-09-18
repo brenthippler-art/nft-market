@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import SubHeader from "../images/subheader.jpg";
 import axios from "axios";
-import SkeletonCarousel, {
+import {
   SkeletonGrid,
 } from "../components/UI/SkeletonCarousel";
 import NftItemTile from "../components/UI/NFTItemTile";

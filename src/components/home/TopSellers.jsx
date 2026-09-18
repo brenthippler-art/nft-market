@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import SkeletonCarousel, { SkeletonList } from "../UI/SkeletonCarousel";
+import { SkeletonList } from "../UI/SkeletonCarousel";
 import TopSellerTile from "../UI/TopSellerTile";
 
 const TOP_SELLERS_URL =
