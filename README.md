@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# Ultraverse
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An NFT marketplace UI rebuilt from a static template into a data-driven React app. Every collection, item, and seller loads from a live API, with custom skeleton loading states and carousel-driven browsing.
 
-## Available Scripts
+**[View the live site →](https://nft-market-ten-omega.vercel.app/)**
 
-In the project directory, you can run:
+![Ultraverse home page](./screenshot.png)
 
-### `npm start`
+## About the project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Ultraverse started as a static marketplace template with hard-coded content. I turned it into a working React app that fetches all of its data from an API, handles loading states cleanly, and routes to dynamic pages for individual items and authors. I built it as part of Frontend Simplified's frontend program.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+- **Live API data:** collections, items, and sellers are fetched with Axios instead of hard-coded
+- **Carousels:** browse hot collections and new items in responsive carousels
+- **Skeleton loading states:** every data-driven section shows a placeholder shaped like its final layout while data loads
+- **Dynamic routing:** item and author pages are generated from URL parameters with React Router <!-- TODO: confirm -->
+- **Countdown timers and filtering:** live countdowns on items and sorting on the Explore page <!-- TODO: confirm -->
+- **Scroll animations:** sections animate into view with AOS
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Key technical decision
 
-### `npm run build`
+I built skeleton loaders that match each component's final layout instead of using a generic spinner. The page holds its shape while data loads, so content doesn't jump around when the API responds. That's a better experience for users, and it avoids layout shift, which is one of Google's Core Web Vitals.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Tech stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- React
+- React Router
+- Axios
+- Owl Carousel
+- AOS (Animate On Scroll)
+- Bootstrap
+- Deployed on Vercel
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Running locally
 
-### `npm run eject`
+```bash
+git clone https://github.com/brenthippler-art/nft-market.git
+cd nft-market
+npm install
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The app runs at http://localhost:3000.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Credits
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Image credits are listed in [image-credits.txt](./image-credits.txt).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Author
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Brenton Hippler:** [Portfolio](https://brentoncodes.dev) · [LinkedIn](https://www.linkedin.com/in/brenton-hippler-818b6397) · [GitHub](https://github.com/brenthippler-art)
